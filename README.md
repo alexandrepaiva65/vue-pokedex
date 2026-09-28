@@ -1,29 +1,65 @@
-# vue-pokedex
+# Vue Pokédex
 
-This template should help get you started developing with Vue 3 in Vite.
+Projeto simples de estudo desenvolvido para praticar os fundamentos do Vue 3 com Vite e o consumo de uma API externa.
 
-## Recommended IDE Setup
+A aplicação consulta a [PokéAPI](https://pokeapi.co/) e exibe uma lista de 20 Pokémon. Para cada item, são carregados os detalhes do Pokémon, como nome, imagem, tipos e link para a resposta correspondente da API.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Objetivos de estudo
 
-## Customize configuration
+- Criar componentes reutilizáveis com Vue 3;
+- Trabalhar com propriedades (`props`) e renderização de listas;
+- Buscar dados externos com `fetch` e `async/await`;
+- Combinar requisições com `Promise.all`;
+- Organizar a aplicação em componentes e containers;
+- Desenvolver e gerar uma aplicação Vue usando Vite.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Tecnologias
 
-## Project Setup
+- [Vue 3](https://vuejs.org/)
+- [Vite](https://vite.dev/)
+- [PokéAPI](https://pokeapi.co/)
+
+## Como executar
+
+### Pré-requisitos
+
+- Node.js instalado;
+- npm instalado.
+
+### Instalação
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Ambiente de desenvolvimento
+
+Inicie o servidor local com:
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+O Vite exibirá no terminal o endereço para acessar a aplicação no navegador.
+
+### Build de produção
+
+Para gerar os arquivos otimizados:
 
 ```sh
 npm run build
 ```
+
+Para visualizar o build localmente:
+
+```sh
+npm run preview
+```
+
+## Estrutura principal
+
+- `src/App.vue`: componente raiz da aplicação;
+- `src/containers/MainContainer.vue`: busca os dados da PokéAPI e organiza os cards;
+- `src/components/Header.vue`: cabeçalho da aplicação;
+- `src/components/Card.vue`: apresenta os dados de cada Pokémon;
+- `src/assets/base.css`: estilos base.
